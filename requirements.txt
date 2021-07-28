@@ -1,0 +1,2 @@
+# Add packages that are not installed in the container by default
+pytorch-lightning

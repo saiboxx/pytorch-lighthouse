@@ -1,0 +1,27 @@
+########################################################################################
+### CONFIGURATION FILE
+########################################################################################
+
+# The root keys belong to the three main components of a PyTorch Lightning project:
+# LightningModule (MODULE), LightningDataModule (DATA) and Trainer (TRAINER).
+# The parameters under the keys are fed to the respective components as arguments on
+# their initialization. This may not be the cleanest solution but allows quick
+# prototyping without changing and fiddling in the source files.
+
+########################################################################################
+### TRAINER PARAMETERS
+########################################################################################
+TRAINER:
+  max_epochs: 10
+
+########################################################################################
+### DATA MODULE PARAMETERS
+########################################################################################
+DATA:
+  batch_size: 32
+  num_workers: 4
+
+########################################################################################
+### MODULE PARAMETERS
+########################################################################################
+MODULE:
