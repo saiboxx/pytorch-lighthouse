@@ -1,2 +1,4 @@
 # Add packages that are not installed in the container by default
+torchmetrics
+torchvision
 pytorch-lightning

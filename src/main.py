@@ -1,10 +1,9 @@
 """Main entrypoint for conducting training with PyTorch Lightning."""
-import torch.cuda
 from pytorch_lightning import Trainer
 from pytorch_lightning.loggers import TensorBoardLogger
 
-from module import LitModule
 from data import LitDataModule
+from module import LitModule
 from utils.io import read_yml
 
 
