@@ -1,14 +1,20 @@
-from typing import Optional, Dict
+"""Contains data modules and datasets."""
+
+from typing import Dict, Optional
 
 import pytorch_lightning as pl
 from torch.utils.data import DataLoader, Dataset
 
 
 class LitDataModule(pl.LightningDataModule):
-    def __init__(self,
-                 batch_size: int = 32,
-                 num_workers: int = 4,
-                 ):
+    """PyTorch Lightning data module."""
+
+    def __init__(
+        self,
+        batch_size: int = 32,
+        num_workers: int = 4,
+    ):
+        """Initialize a Lightning data module."""
         super().__init__()
         self.batch_size = batch_size
         self.num_workers = num_workers
@@ -25,7 +31,7 @@ class LitDataModule(pl.LightningDataModule):
 
     def setup(self, stage: Optional[str] = None) -> None:
         """
-        Setup data.
+        Perform data setup.
 
         Called at the beginning of fit (train + validate), validate, test, and predict.
         Called on every process in DDP.
@@ -61,7 +67,7 @@ class LitDataModule(pl.LightningDataModule):
 
 class LitDataSet(Dataset):
     """
-    PyTorch Dataset
+    PyTorch Dataset.
 
     A PyTorch Dataset needs to at least implement the methods `__len__`
     and `__getitem__`.

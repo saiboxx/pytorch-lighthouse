@@ -1,4 +1,4 @@
-name: Python package check
+name: code check
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
     branches: [ master ]
 
 jobs:
-  build:
+  check:
 
     runs-on: ubuntu-latest
 
