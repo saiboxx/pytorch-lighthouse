@@ -1,5 +1,9 @@
 """Classes and functions for creating Lightning modules."""
-from typing import Dict, Any, List
+from typing import (
+    Any,
+    Dict,
+    List,
+)
 
 import pytorch_lightning as pl
 from torch import Tensor
@@ -19,9 +23,10 @@ class LitModule(pl.LightningModule):
     https://pytorch-lightning.readthedocs.io/en/latest/api/pytorch_lightning.core.lightning.html
     """
 
-    def __init__(self):
+    def __init__(self, param: Any = None):
         """Initialize a lightning module."""
         super().__init__()
+        self.param = param
         self.net = LitNetwork()
 
     def forward(self, x: Tensor) -> Tensor:
